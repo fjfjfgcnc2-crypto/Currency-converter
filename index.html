@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محول العملات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="converter-app">
+        <h1>💸 محول العملات</h1>
+
+        <div class="input-section">
+            <label for="amount">المبلغ:</label>
+            <input type="number" id="amount" value="1.00" min="0" step="0.01">
+        </div>
+
+        <div class="currency-selectors">
+            <div class="selector-group">
+                <label for="from-currency">من (From):</label>
+                <select id="from-currency">
+                    <option value="USD" selected>دولار أمريكي (USD)</option>
+                    <option value="EUR">يورو (EUR)</option>
+                    <option value="SAR">ريال سعودي (SAR)</option>
+                    <option value="EGP">جنيه مصري (EGP)</option>
+                    <option value="AED">درهم إماراتي (AED)</option>
+                    <option value="QAR">ريال قطري (QAR)</option>
+                    <option value="KWD">دينار كويتي (KWD)</option>
+                    <option value="GBP">جنيه إسترليني (GBP)</option>
+                    <option value="JPY">ين ياباني (JPY)</option>
+                    <option value="TRY">ليرة تركية (TRY)</option>
+                    <option value="JOD">دينار أردني (JOD)</option>
+                    <option value="OMR">ريال عماني (OMR)</option>
+                    <option value="MAD">درهم مغربي (MAD)</option>
+                    <option value="AUD">دولار أسترالي (AUD)</option>
+                </select>
+            </div>
+            
+            <button id="swap-btn">🔄</button>
+
+            <div class="selector-group">
+                <label for="to-currency">إلى (To):</label>
+                <select id="to-currency">
+                    <option value="SAR" selected>ريال سعودي (SAR)</option>
+                    <option value="EUR">يورو (EUR)</option>
+                    <option value="EGP">جنيه مصري (EGP)</option>
+                    <option value="USD">دولار أمريكي (USD)</option>
+                    <option value="AED">درهم إماراتي (AED)</option>
+                    <option value="QAR">ريال قطري (QAR)</option>
+                    <option value="KWD">دينار كويتي (KWD)</option>
+                    <option value="GBP">جنيه إسترليني (GBP)</option>
+                    <option value="JPY">ين ياباني (JPY)</option>
+                    <option value="TRY">ليرة تركية (TRY)</option>
+                    <option value="JOD">دينار أردني (JOD)</option>
+                    <option value="OMR">ريال عماني (OMR)</option>
+                    <option value="MAD">درهم مغربي (MAD)</option>
+                    <option value="AUD">دولار أسترالي (AUD)</option>
+                </select>
+            </div>
+        </div>
+
+        <button id="convert-btn">تحويل</button>
+        
+        <div class="result-section">
+            <p>النتيجة المحولة:</p>
+            <div id="result" class="conversion-display">--</div>
+            <p id="rate-display" class="rate-info"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
